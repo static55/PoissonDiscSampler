@@ -1,9 +1,15 @@
-package com.varunpant.quadtree;
+package com.stewartrap.quadtree;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.varunpant.quadtree.NodeType.LEAF;
+// This code is MIT licensed. It's a slightly tweaked version
+// of the QuadTree library by Varun Pant available at
+//
+// https://github.com/varunpant/Quadtree
+
+
+import static com.stewartrap.quadtree.NodeType.LEAF;
 
 /**
  * Datastructure: A point Quad Tree for representing 2D data. Each

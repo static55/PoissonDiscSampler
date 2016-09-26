@@ -1,8 +1,8 @@
 package com.stewartrap.poissondiscsampler;
 
-import com.varunpant.quadtree.Node;
-import com.varunpant.quadtree.Point;
-import com.varunpant.quadtree.QuadTree;
+import com.stewartrap.quadtree.Node;
+import com.stewartrap.quadtree.Point;
+import com.stewartrap.quadtree.QuadTree;
 
 public class PoissonDiscSampler {
 

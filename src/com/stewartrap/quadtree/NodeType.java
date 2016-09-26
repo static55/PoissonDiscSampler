@@ -1,4 +1,4 @@
-package com.varunpant.quadtree;
+package com.stewartrap.quadtree;
 
 /**
  * Enumeration of node types.

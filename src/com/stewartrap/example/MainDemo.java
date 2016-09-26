@@ -1,8 +1,8 @@
 package com.stewartrap.example;
 
 import com.stewartrap.poissondiscsampler.PoissonDiscSampler;
-import com.varunpant.quadtree.Point;
-import com.varunpant.quadtree.QuadTree;
+import com.stewartrap.quadtree.Point;
+import com.stewartrap.quadtree.QuadTree;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -17,14 +17,11 @@ public class MainDemo {
     public static void main( String[] args ) {
 
         QuadTree quadTree = new QuadTree( QUADTREE_WIDTH, QUADTREE_HEIGHT );
-
         PoissonDiscSampler sampler = new PoissonDiscSampler( quadTree );
 
         // if numCandidates isn't set via setNumCandidates(), it'll default to 10.
         sampler.setNumCandidates( 10 );
-
         sampler.addNumPoints( 500 );
-
         Point points[] = sampler.toArray();
 
         System.out.println( "List of points: ");

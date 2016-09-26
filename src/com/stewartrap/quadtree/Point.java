@@ -1,4 +1,4 @@
-package com.varunpant.quadtree;
+package com.stewartrap.quadtree;
 
 public class Point implements Comparable {
 
