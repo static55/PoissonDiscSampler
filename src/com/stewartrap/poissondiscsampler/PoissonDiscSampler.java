@@ -6,12 +6,10 @@ import com.varunpant.quadtree.QuadTree;
 
 public class PoissonDiscSampler {
 
-    int numAdds = 0;
-
     private Point[][] mPoints;
     private int mWidth;
     private int mHeight;
-    public int NUM_CANDIDATES = 10;
+    private int mNumCandidates = 10;
     private QuadTree mQuadTree;
 
     public PoissonDiscSampler( QuadTree quadTree ) {
@@ -22,6 +20,11 @@ public class PoissonDiscSampler {
         mHeight = mQuadTree.getHeight();
     }
 
+    public void setNumCandidates( int numCandidates ) {
+
+        mNumCandidates = numCandidates;
+    }
+
     public void addNumPoints( int numPointsToAdd) {
 
         // add a point to the quadtree if it's empty
@@ -30,7 +33,7 @@ public class PoissonDiscSampler {
             numPointsToAdd--;
         }
 
-        Point candidatePoints[] = new Point[NUM_CANDIDATES];
+        Point candidatePoints[] = new Point[mNumCandidates];
         double furthestDistance;
         double distance;
         int furthestDistanceIndex;
@@ -39,7 +42,7 @@ public class PoissonDiscSampler {
         for ( ; numPointsToAdd > 0; numPointsToAdd-- ) {
 
             // generate random candidate points that aren't already in the quadtree
-            for ( int i = 0; i < NUM_CANDIDATES; i++ ) {
+            for (int i = 0; i < mNumCandidates; i++ ) {
 
                 candidatePoints[i] = generateRandomPoint();
                 while ( mQuadTree.find( candidatePoints[i] ) != null ) { // while point already exists in quadtree
@@ -52,9 +55,9 @@ public class PoissonDiscSampler {
             // the same coordinates of another candidate point,
             // overwrite one of the duplicate points until all
             // candidate points are unique. -- TODO: TOO SLOW? FIX...?
-            for ( int j = 0; j < NUM_CANDIDATES; j++ ) {
+            for (int j = 0; j < mNumCandidates; j++ ) {
 
-                for ( int k = 0; k < NUM_CANDIDATES; k++ ) {
+                for (int k = 0; k < mNumCandidates; k++ ) {
                     if ( j != k ) {
                         while ( candidatePoints[j].hasCoordinatesOf(candidatePoints[k]) ) {
                             candidatePoints[j] = generateRandomPoint();
@@ -72,7 +75,7 @@ public class PoissonDiscSampler {
             //      for the previous points, save the index of
             //      the candidate point to furthestDistanceIndex
 
-            for ( int i = 0; i < NUM_CANDIDATES; i++ ) {
+            for (int i = 0; i < mNumCandidates; i++ ) {
 
                 distance = findDistance(    findNearestPointInQuadTree( candidatePoints[i] ),
                                             candidatePoints[i]);

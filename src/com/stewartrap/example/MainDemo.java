@@ -20,6 +20,9 @@ public class MainDemo {
 
         PoissonDiscSampler sampler = new PoissonDiscSampler( quadTree );
 
+        // if numCandidates isn't set via setNumCandidates(), it'll default to 10.
+        sampler.setNumCandidates( 10 );
+
         sampler.addNumPoints( 500 );
 
         Point points[] = sampler.toArray();
