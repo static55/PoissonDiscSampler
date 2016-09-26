@@ -2,6 +2,8 @@
 
 This is a simple library that somewhat evenly arranges points in a graph.
 
+If you're doing some sort of serious number crunching, this might not be the library for you as I don't really know the "right"/most efficient way to implement this algorithm. But it works well enough for my purposes. Hopefully it'll work for you too.
+
 ##Examples
 
 ###A 200x200 graph with 500 points
