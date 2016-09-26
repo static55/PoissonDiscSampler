@@ -11,8 +11,8 @@ import java.io.IOException;
 
 public class MainDemo {
 
-    private static final int QUADTREE_WIDTH = 200;
-    private static final int QUADTREE_HEIGHT = 200;
+    private static final int QUADTREE_WIDTH = 100;
+    private static final int QUADTREE_HEIGHT = 100;
 
     public static void main( String[] args ) {
 
@@ -21,7 +21,7 @@ public class MainDemo {
 
         // if numCandidates isn't set via setNumCandidates(), it'll default to 10.
         sampler.setNumCandidates( 10 );
-        sampler.addNumPoints( 500 );
+        sampler.addNumPoints( 10 );
         Point points[] = sampler.toArray();
 
         System.out.println( "List of points: ");
