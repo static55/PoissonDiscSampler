@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PoissonRectangle.iml" filepath="$PROJECT_DIR$/.idea/modules/PoissonRectangle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PoissonRectangle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PoissonRectangle_main.iml" group="PoissonRectangle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PoissonRectangle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PoissonRectangle_test.iml" group="PoissonRectangle" />
+    </modules>
+  </component>
+</project>
